@@ -1,0 +1,3 @@
+constant file ->configuration file -> data ingestion
+
+constant file -> congiguration file -> data transformation -> utiles file -> data transformation
