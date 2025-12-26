@@ -27,7 +27,7 @@ class PredictionPipeline:
             logging.info("Error occured in prediction pipeline")
             raise CustomException(e, sys)
 
-     """categorical_columns = ['Type_of_order','Type_of_vehicle','Festival','City']
+    """categorical_columns = ['Type_of_order','Type_of_vehicle','Festival','City']
             ordinal_encoder = ['Road_traffic_density', 'Weather_conditions']
             numerical_column=['Delivery_person_Age','Delivery_person_Ratings','Vehicle_condition',
                               'multiple_deliveries','distance']

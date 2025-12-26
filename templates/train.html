@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Model</title>
+</head>
+<body>
+
+<h2>Model Training</h2>
+
+<form method="POST" action="/train">
+    <button type="submit">Start Training</button>
+</form>
+
+{% if message %}
+    <h3 style="color:green;">{{ message }}</h3>
+{% endif %}
+
+{% if error %}
+    <h3 style="color:red;">{{ error }}</h3>
+{% endif %}
+
+<br>
+<a href="/">Back to Home</a>
+
+</body>
+</html>
