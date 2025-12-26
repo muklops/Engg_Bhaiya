@@ -31,7 +31,7 @@ class Feature_Engineering(BaseEstimator, TransformerMixin):
 
     def transform_data(self,df):
         try:
-            df.drop(['ID'],axis=1,inplace=True)
+            df.drop(['ID'],axis=1,inplace=True,errors='ignore')
             self.distance_numpy(df,'Restaurant_latitude',
                                 'Restaurant_longitude',
                                 'Delivery_location_latitude',
@@ -39,7 +39,7 @@ class Feature_Engineering(BaseEstimator, TransformerMixin):
             df.drop(['Delivery_person_ID', 'Restaurant_latitude','Restaurant_longitude',
                                 'Delivery_location_latitude',
                                 'Delivery_location_longitude',
-                                'Order_Date','Time_Orderd','Time_Order_picked'],axis=1,inplace=True)
+                                'Order_Date','Time_Orderd','Time_Order_picked'],axis=1,inplace=True,errors='ignore')
             logging.info("Dropping columns from our original dataset")
             return df
 
